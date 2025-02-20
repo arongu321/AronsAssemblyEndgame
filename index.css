@@ -40,14 +40,15 @@ header.header > p.instructions {
 
 /* Status section */
 section.game-status {
-    margin-top: 10px;
     background-color: #10a95b;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
     color: #f9f4da;
     border-radius: 5px;
+
+    /* Sets top and bottom margins */
+    margin-block: 25px;
 }
 
 section.game-status > h2 {
@@ -56,10 +57,25 @@ section.game-status > h2 {
 }
 
 section.game-status > p {
-    margin: 0;
+    margin: 5px;
 }
 
 section.game-status > h2,
 section.game-status > p {
     font-weight: 500;
+}
+
+/* Languages section */
+section.languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 5px solid green;
+    gap: 4px;
+    max-width: 350px;
+}
+
+section.languages > div.language {
+    padding: 4px;
+    border-radius: 4px;
 }
