@@ -75,7 +75,29 @@ section.languages {
     max-width: 350px;
 }
 
-section.languages > div.language {
+section.languages > span.language {
     padding: 4px;
     border-radius: 4px;
+}
+
+/* Word letter slots section */
+section.word-section {
+    /* Since the flex direction is row, justify content will center it horizontally */
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+section.word-section > span.letter-slot {
+    width: 40px;
+    height: 40px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #f9f4da;
+    border-bottom: 1px solid #f9f4da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #323232;
 }

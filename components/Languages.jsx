@@ -7,9 +7,9 @@ export default function Languages() {
             color: language.color,
         };
         return (
-            <div key={language.name} style={styles} className="language">
+            <span key={language.name} style={styles} className="language">
                 {language.name}
-            </div>
+            </span>
         );
     });
     return <section className="languages">{languageElements}</section>;
