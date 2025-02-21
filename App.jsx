@@ -8,14 +8,15 @@ import NewGameButton from './components/NewGameButton';
 
 export default function AssemblyEndgame() {
     const [word, setWord] = React.useState('react');
-
+    const [userGuesses, setUserGuesses] = React.useState([]);
+    console.log(userGuesses);
     return (
         <main>
             <Header />
             <GameStatus />
             <Languages />
             <WordSection word={word} />
-            <Keyboard />
+            <Keyboard setGuesses={setUserGuesses} />
             <NewGameButton />
         </main>
     );
