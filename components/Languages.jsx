@@ -1,5 +1,6 @@
 import { languages } from '../languages.js';
 import clsx from 'clsx';
+import Language from './Language.jsx';
 
 export default function Languages(props) {
     const languageElements = languages.map((language, index) => {
@@ -11,9 +12,11 @@ export default function Languages(props) {
             'lost': index < props.wrongGuessCount,
         });
         return (
-            <span key={language.name} style={styles} className={className}>
-                {language.name}
-            </span>
+            <Language
+                language={language}
+                styles={styles}
+                className={className}
+            />
         );
     });
     return <section className="languages">{languageElements}</section>;

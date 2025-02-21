@@ -1,5 +1,3 @@
-import clsx from 'clsx';
-
 export default function LetterKeypad(props) {
     return (
         <button

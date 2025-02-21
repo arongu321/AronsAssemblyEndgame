@@ -5,6 +5,7 @@ import Languages from './components/Languages';
 import WordSection from './components/WordSection';
 import Keyboard from './components/Keyboard';
 import NewGameButton from './components/NewGameButton';
+import { languages } from './languages';
 
 export default function AssemblyEndgame() {
     // State variables
@@ -15,6 +16,12 @@ export default function AssemblyEndgame() {
     const wrongGuessCount = userGuesses.filter(
         (letter) => !word.includes(letter)
     ).length;
+
+    const isGameWon = word
+        .split('')
+        .every((letter) => userGuesses.includes(letter));
+    const isGameLost = wrongGuessCount >= languages.length - 1;
+    const isGameOver = isGameWon || isGameLost;
 
     return (
         <main>
@@ -27,7 +34,7 @@ export default function AssemblyEndgame() {
                 guesses={userGuesses}
                 setGuesses={setUserGuesses}
             />
-            <NewGameButton />
+            {isGameOver && <NewGameButton />}
         </main>
     );
 }
