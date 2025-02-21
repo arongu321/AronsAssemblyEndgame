@@ -7,9 +7,15 @@ import Keyboard from './components/Keyboard';
 import NewGameButton from './components/NewGameButton';
 
 export default function AssemblyEndgame() {
+    // State variables
     const [word, setWord] = React.useState('react');
     const [userGuesses, setUserGuesses] = React.useState([]);
-    console.log(userGuesses);
+
+    // Derived state variables
+    const wrongGuessCount = userGuesses.filter(
+        (letter) => !word.includes(letter)
+    ).length;
+
     return (
         <main>
             <Header />
