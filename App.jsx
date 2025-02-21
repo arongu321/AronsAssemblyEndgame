@@ -15,7 +15,7 @@ export default function AssemblyEndgame() {
             <Header />
             <GameStatus />
             <Languages />
-            <WordSection word={word} />
+            <WordSection currentWord={word} guesses={userGuesses} />
             <Keyboard
                 currentWord={word}
                 guesses={userGuesses}
