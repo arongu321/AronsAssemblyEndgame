@@ -20,7 +20,7 @@ export default function AssemblyEndgame() {
         <main>
             <Header />
             <GameStatus />
-            <Languages />
+            <Languages wrongGuessCount={wrongGuessCount} />
             <WordSection currentWord={word} guesses={userGuesses} />
             <Keyboard
                 currentWord={word}

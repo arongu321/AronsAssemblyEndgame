@@ -71,7 +71,7 @@ section.languages {
     flex-wrap: wrap;
     justify-content: center;
     border: 5px solid green;
-    gap: 4px;
+    gap: 5px;
     max-width: 350px;
     margin-bottom: 36px;
 }
@@ -79,6 +79,24 @@ section.languages {
 section.languages > span.language {
     padding: 4px;
     border-radius: 4px;
+
+    /* Ensures that dimmed overlay stays on language block */
+    position: relative;
+}
+
+/* Dimmed overlay with skull on "lost" languages */
+section.languages > span.language.lost::before {
+    content: '💀';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Word letter slots section */
