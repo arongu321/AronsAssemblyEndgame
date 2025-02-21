@@ -16,7 +16,11 @@ export default function AssemblyEndgame() {
             <GameStatus />
             <Languages />
             <WordSection word={word} />
-            <Keyboard setGuesses={setUserGuesses} />
+            <Keyboard
+                currentWord={word}
+                guesses={userGuesses}
+                setGuesses={setUserGuesses}
+            />
             <NewGameButton />
         </main>
     );
