@@ -9,7 +9,7 @@ export default function Languages(props) {
             color: language.color,
         };
         const className = clsx('language', {
-            'lost': index < props.wrongGuessCount,
+            lost: index < props.wrongGuessCount,
         });
         return (
             <Language
