@@ -7,10 +7,11 @@ import Keyboard from './components/Keyboard';
 import NewGameButton from './components/NewGameButton';
 import WordScreenReader from './components/WordScreenReader';
 import { languages } from './languages';
+import { getRandomWord } from './utils';
 
 export default function AssemblyEndgame() {
     // State variables
-    const [word, setWord] = React.useState('react');
+    const [word, setWord] = React.useState(getRandomWord());
     const [userGuesses, setUserGuesses] = React.useState([]);
 
     // Derived state variables
