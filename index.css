@@ -50,6 +50,9 @@ section.game-status {
     color: #f9f4da;
     border-radius: 5px;
 
+    /* Ensures message box covers entire width */
+    width: 100%;
+
     /* Sets top and bottom margins */
     margin-block: 25px;
 }
