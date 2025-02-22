@@ -40,7 +40,6 @@ header.header > p.instructions {
 
 /* Status section */
 section.game-status {
-    background-color: #10a95b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +62,14 @@ section.game-status > p {
 section.game-status > h2,
 section.game-status > p {
     font-weight: 500;
+}
+
+section.game-status.won {
+    background-color: #10a95b;
+}
+
+section.game-status.lost {
+    background-color: #ba2a2a;
 }
 
 /* Languages section */
