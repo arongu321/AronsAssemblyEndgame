@@ -42,6 +42,7 @@ export default function AssemblyEndgame() {
                 currentWord={word}
                 guesses={userGuesses}
                 setGuesses={setUserGuesses}
+                gameOver={isGameOver}
             />
             {isGameOver && <NewGameButton />}
         </main>

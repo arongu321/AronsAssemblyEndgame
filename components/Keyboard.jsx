@@ -27,6 +27,7 @@ export default function Keyboard(props) {
                 onClick={() => pickLetter(letter)}
                 index={index}
                 letter={letter}
+                disabled={props.gameOver}
             />
         );
     });
