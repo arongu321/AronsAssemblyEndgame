@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { languages } from '../languages';
-import { getFarewellText } from '../utils';
+import { languages } from '../../languages';
+import { getFarewellText } from '../../utils';
 
 export default function GameStatus(props) {
     const gameStatusClasses = clsx('game-status', {

@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from './components/Header';
-import GameStatus from './components/GameStatus';
-import Languages from './components/Languages';
-import WordSection from './components/WordSection';
-import Keyboard from './components/Keyboard';
-import NewGameButton from './components/NewGameButton';
-import WordScreenReader from './components/WordScreenReader';
+import Header from './components/header/Header';
+import GameStatus from './components/game-status/GameStatus';
+import Languages from './components/languages/Languages';
+import WordSection from './components/word-section/WordSection';
+import Keyboard from './components/keyboard/Keyboard';
+import NewGameButton from './components/new-game/NewGameButton';
+import WordScreenReader from './components/word-section/WordScreenReader';
+import ReactConfetti from 'react-confetti';
 import { languages } from './languages';
 import { getRandomWord } from './utils';
 
@@ -32,6 +33,7 @@ export default function AssemblyEndgame() {
 
     return (
         <main>
+            {isGameWon && <ReactConfetti />}
             <Header />
             <GameStatus
                 gameWon={isGameWon}

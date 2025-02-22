@@ -1,4 +1,4 @@
-import { languages } from '../languages.js';
+import { languages } from '../../languages.js';
 import clsx from 'clsx';
 import Language from './Language.jsx';
 

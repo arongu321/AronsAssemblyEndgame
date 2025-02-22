@@ -1,4 +1,4 @@
-import { getRandomWord } from '../utils';
+import { getRandomWord } from '../../utils';
 
 export default function NewGameButton(props) {
     function generateNewWord() {
