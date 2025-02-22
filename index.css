@@ -47,8 +47,10 @@ section.game-status {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: #f9f4da;
     border-radius: 5px;
+    min-height: 60px;
 
     /* Ensures message box covers entire width */
     width: 100%;
@@ -71,10 +73,23 @@ section.game-status > p {
     font-weight: 500;
 }
 
+/* Farewell message */
+section.game-status > p.farewell-message {
+    font-style: italic;
+    font-weight: 400;
+}
+
+section.game-status.farewell {
+    background-color: #7a5ea7;
+    border: 1px dashed #323232;
+}
+
+/* Game won */
 section.game-status.won {
     background-color: #10a95b;
 }
 
+/* Game lost */
 section.game-status.lost {
     background-color: #ba2a2a;
 }

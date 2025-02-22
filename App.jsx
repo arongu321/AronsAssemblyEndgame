@@ -22,6 +22,9 @@ export default function AssemblyEndgame() {
         .every((letter) => userGuesses.includes(letter));
     const isGameLost = wrongGuessCount >= languages.length - 1;
     const isGameOver = isGameWon || isGameLost;
+    const lastGuessedLetter = userGuesses[userGuesses.length - 1];
+    const isLastGuessIncorrect =
+        lastGuessedLetter && !word.includes(lastGuessedLetter);
 
     return (
         <main>
@@ -30,6 +33,8 @@ export default function AssemblyEndgame() {
                 gameWon={isGameWon}
                 gameLost={isGameLost}
                 gameOver={isGameOver}
+                lastGuessIncorrect={isLastGuessIncorrect}
+                wrongGuessCount={wrongGuessCount}
             />
             <Languages wrongGuessCount={wrongGuessCount} />
             <WordSection currentWord={word} guesses={userGuesses} />
