@@ -11,7 +11,7 @@ import { getRandomWord } from './utils';
 
 export default function AssemblyEndgame() {
     // State variables
-    const [word, setWord] = React.useState(getRandomWord());
+    const [word, setWord] = React.useState(() => getRandomWord());
     const [userGuesses, setUserGuesses] = React.useState([]);
 
     // Derived state variables
@@ -54,7 +54,9 @@ export default function AssemblyEndgame() {
                 setGuesses={setUserGuesses}
                 gameOver={isGameOver}
             />
-            {isGameOver && <NewGameButton />}
+            {isGameOver && (
+                <NewGameButton setWord={setWord} setGuesses={setUserGuesses} />
+            )}
         </main>
     );
 }
