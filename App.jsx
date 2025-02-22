@@ -5,6 +5,7 @@ import Languages from './components/Languages';
 import WordSection from './components/WordSection';
 import Keyboard from './components/Keyboard';
 import NewGameButton from './components/NewGameButton';
+import WordScreenReader from './components/WordScreenReader';
 import { languages } from './languages';
 
 export default function AssemblyEndgame() {
@@ -16,6 +17,8 @@ export default function AssemblyEndgame() {
     const wrongGuessCount = userGuesses.filter(
         (letter) => !word.includes(letter)
     ).length;
+
+    const numGuessesLeft = languages.length - wrongGuessCount;
 
     const isGameWon = word
         .split('')
@@ -38,6 +41,12 @@ export default function AssemblyEndgame() {
             />
             <Languages wrongGuessCount={wrongGuessCount} />
             <WordSection currentWord={word} guesses={userGuesses} />
+            <WordScreenReader
+                lastGuess={lastGuessedLetter}
+                guessesLeft={numGuessesLeft}
+                currentWord={word}
+                guesses={userGuesses}
+            />
             <Keyboard
                 currentWord={word}
                 guesses={userGuesses}

@@ -28,6 +28,7 @@ export default function Keyboard(props) {
                 index={index}
                 letter={letter}
                 disabled={props.gameOver}
+                guesses={props.guesses}
             />
         );
     });

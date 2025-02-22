@@ -149,6 +149,19 @@ section.word-section > span.letter-slot {
     background-color: #323232;
 }
 
+/* Screen reader only word section */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Keyboard section */
 section.keyboard {
     display: flex;
