@@ -41,7 +41,11 @@ export default function AssemblyEndgame() {
                 wrongGuessCount={wrongGuessCount}
             />
             <Languages wrongGuessCount={wrongGuessCount} />
-            <WordSection currentWord={word} guesses={userGuesses} />
+            <WordSection
+                currentWord={word}
+                guesses={userGuesses}
+                gameLost={isGameLost}
+            />
             <WordScreenReader
                 lastGuess={lastGuessedLetter}
                 guessesLeft={numGuessesLeft}

@@ -149,6 +149,11 @@ section.word-section > span.letter-slot {
     background-color: #323232;
 }
 
+/* For any letters that were not guessed when game was lost */
+section.word-section > span.letter-slot.not-guessed {
+    color: #ec5d49;
+}
+
 /* Screen reader only word section */
 .sr-only {
     position: absolute;
